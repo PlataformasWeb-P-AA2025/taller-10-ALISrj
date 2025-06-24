@@ -1,0 +1,18 @@
+<h1>{{mititulo}}</h1>
+<hr>
+<h3>Número de Barrios {{ numero_barrios }}</h3>
+<hr>
+<hr>
+
+<ul>
+    {% for b in barrios %}
+    <li>
+        <h4>{{b.nombre}}</h4>
+        <b>Número de viviendas:</b>
+        <p>{{b.numero_viviendas}}</p>
+        <b>Número de parques:</b>
+        <p>{{b.numero_parques}}</p>
+    </li>
+    {% endfor %}
+</ul>
+
