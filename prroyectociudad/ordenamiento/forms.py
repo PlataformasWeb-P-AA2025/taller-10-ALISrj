@@ -1,12 +1,14 @@
-from django.forms import models
+from django.forms import ModelForm
 from .models import Parroquia, BarrioCiudadela
 
-class ParroquiaForm(models.Model):
+
+class ParroquiaForm(ModelForm):
     class Meta:
         model = Parroquia
-        fields = ['nombre', 'tipo']
+        fields = ['nombre', 'ubicacion', 'tipo']
 
-class BarrioCiudadelaForm(models.Model):
+
+class BarrioCiudadelaForm(ModelForm):
     class Meta:
         model = BarrioCiudadela
         fields = ['nombre', 'numero_viviendas', 'numero_parques', 'numero_edificios', 'parroquia']
